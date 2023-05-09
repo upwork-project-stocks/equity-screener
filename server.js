@@ -26,10 +26,11 @@ mongoose
 cron.schedule("* 2 * * * *", () => {
   console.log("Starting cron");
   startSearch.startingPointEquities();
+  startSearch.startingPointCryptos();
   console.log("Cron job ended");
 });
 
-const server = app.listen(3000, () => {
+const server = app.listen(10000, () => {
   console.log("Server Running");
   setTimeout(() => {
     // startSearch.sleep(1500);
