@@ -23,10 +23,10 @@ mongoose
 
 // allStocks.allStocks();
 
-cron.schedule("* 2 * * * *", () => {
+cron.schedule("* 2 * * * *", async () => {
   console.log("Starting cron");
-  startSearch.startingPointEquities();
-  startSearch.startingPointCryptos();
+  await startSearch.startingPointEquities();
+  await startSearch.startingPointCryptos();
   console.log("Cron job ended");
 });
 
