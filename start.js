@@ -14,7 +14,7 @@ exports.startingPointEquities = async () => {
   // 5028
   while (true) {
     let all_syms = await Symbols.find();
-    for (let x = 0; x <= all_syms.length - 1; x++) {
+    for (let x = 0; x <= all_syms.length - 1523; x++) {
       //dataCheck.checkRateLimit(x);
 
       let symbol = all_syms[x].symbol;
@@ -23,7 +23,7 @@ exports.startingPointEquities = async () => {
       //console.log(symbol);
       await sleep(1550);
 
-      // await request.stockRSI(symbol, "1week", "stock");
+      await request.stockRSI(symbol, "1week", "stock");
       // await request.StockStoch(symbol, "1week", "stock");
       // await request.StockStochRsi(symbol, "1week", "stock");
       // // await request.StockMacd(symbol, "1week", "stock");
@@ -35,7 +35,7 @@ exports.startingPointEquities = async () => {
       // request.StockStoch(symbol, "1month", "stock");
       // await sleep(1700);
       // request.StockStochRsi(symbol, "1month", "stock");
-      await request.newStockMacd(symbol, "1month", "stock");
+      // await request.newStockMacd(symbol, "1month", "stock");
     }
     //console.log("fails", failedSearches.failedList);
     // console.log("Out of for loop in equities");
