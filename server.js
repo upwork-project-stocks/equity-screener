@@ -26,6 +26,7 @@ mongoose
 cron.schedule("* * 6 * * *", () => {
   console.log("Starting cron");
   startSearch.startingPointEquities();
+  console.log("Cron job ended");
 });
 
 const server = app.listen(3000, () => {
