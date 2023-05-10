@@ -32,12 +32,4 @@ cron.schedule("* 2 * * * *", async () => {
 
 const server = app.listen(10000, () => {
   console.log("Server Running");
-  setTimeout(() => {
-    // startSearch.sleep(1500);
-    // startSearch.startingPointEquities();
-    // startSearch.sleep(1500);
-    // startSearch.startingPointCryptos();
-    // startSearch.sleep(1500);
-    //startSearch.failedSearchResults();
-  }, 1000);
 });
