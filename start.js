@@ -9,7 +9,12 @@ sleep = async (time) => {
   return new Promise((resolve) => setTimeout(resolve, time));
 };
 
-exports.startingPointEquities = async () => {
+exports.startingPointEquities() = async() =>{
+  await startingPointEquities()
+  await startingPointCryptos()
+}
+
+startingPointEquities = async () => {
   //request.allStocks();
   // 5028
 
@@ -60,7 +65,7 @@ exports.startingPointEquities = async () => {
   console.log("Out of for loop in equities");
 };
 
-exports.startingPointCryptos = async () => {
+startingPointCryptos = async () => {
   //request.allCryptos();
   // 3822
   console.log("In Cryptos");

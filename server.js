@@ -25,8 +25,8 @@ mongoose
 
 cron.schedule("* 2 * * * *", async () => {
   console.log("Starting cron");
-  await startSearch.startingPointEquities();
-  await startSearch.startingPointCryptos();
+  await startSearch.startingPoint();
+
   console.log("Cron job ended");
 });
 
