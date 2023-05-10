@@ -14,19 +14,14 @@ exports.startingPointEquities = async () => {
   // 5028
 
   let all_syms = await Symbols.find();
-  for (let x = 0; x <= all_syms.length - 1523; x++) {
-    //dataCheck.checkRateLimit(x);
-
+  let x = 0;
+  while (x <= all_syms.length) {
     let symbol = all_syms[x].symbol;
-    // console.log(symbol);
-
-    //console.log(symbol);
     await sleep(1550);
 
     await request.stockRSI(symbol, "1week", "stock");
     await request.StockStoch(symbol, "1week", "stock");
     await request.StockStochRsi(symbol, "1week", "stock");
-    // await request.StockMacd(symbol, "1week", "stock");
     await request.newStockMacd(symbol, "1week", "stock");
 
     await sleep(1500);
@@ -36,9 +31,33 @@ exports.startingPointEquities = async () => {
     await sleep(1700);
     request.StockStochRsi(symbol, "1month", "stock");
     await request.newStockMacd(symbol, "1month", "stock");
+    x++;
   }
+  // for (let x = 0; x <= all_syms.length - 1523; x++) {
+  //   //dataCheck.checkRateLimit(x);
+
+  //   let symbol = all_syms[x].symbol;
+  //   // console.log(symbol);
+
+  //   //console.log(symbol);
+  //   await sleep(1550);
+
+  //   await request.stockRSI(symbol, "1week", "stock");
+  //   await request.StockStoch(symbol, "1week", "stock");
+  //   await request.StockStochRsi(symbol, "1week", "stock");
+  //   // await request.StockMacd(symbol, "1week", "stock");
+  //   await request.newStockMacd(symbol, "1week", "stock");
+
+  //   await sleep(1500);
+
+  //   request.stockRSI(symbol, "1month", "stock");
+  //   request.StockStoch(symbol, "1month", "stock");
+  //   await sleep(1700);
+  //   request.StockStochRsi(symbol, "1month", "stock");
+  //   await request.newStockMacd(symbol, "1month", "stock");
+  // }
   //console.log("fails", failedSearches.failedList);
-  // console.log("Out of for loop in equities");
+  console.log("Out of for loop in equities");
 };
 
 exports.startingPointCryptos = async () => {
