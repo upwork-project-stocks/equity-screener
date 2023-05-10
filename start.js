@@ -9,7 +9,7 @@ sleep = async (time) => {
   return new Promise((resolve) => setTimeout(resolve, time));
 };
 
-exports.startingPointEquities() = async() =>{
+exports.startingPointEquities = async() =>{
   await startingPointEquities()
   await startingPointCryptos()
 }
