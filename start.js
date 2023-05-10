@@ -14,7 +14,7 @@ exports.startingPointEquities() = async() =>{
   await startingPointCryptos()
 }
 
-startingPointEquities = async () => {
+function startingPointEquities = async () => {
   //request.allStocks();
   // 5028
 
@@ -65,7 +65,7 @@ startingPointEquities = async () => {
   console.log("Out of for loop in equities");
 };
 
-startingPointCryptos = async () => {
+function startingPointCryptos = async () => {
   //request.allCryptos();
   // 3822
   console.log("In Cryptos");
