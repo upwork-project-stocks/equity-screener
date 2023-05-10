@@ -20,17 +20,17 @@ exports.startingPointEquities = async () => {
     await sleep(1550);
 
     await request.stockRSI(symbol, "1week", "stock");
-    await request.StockStoch(symbol, "1week", "stock");
-    await request.StockStochRsi(symbol, "1week", "stock");
-    await request.newStockMacd(symbol, "1week", "stock");
+    // await request.StockStoch(symbol, "1week", "stock");
+    // await request.StockStochRsi(symbol, "1week", "stock");
+    // await request.newStockMacd(symbol, "1week", "stock");
 
-    await sleep(1500);
+    // await sleep(1500);
 
-    request.stockRSI(symbol, "1month", "stock");
-    request.StockStoch(symbol, "1month", "stock");
-    await sleep(1700);
-    request.StockStochRsi(symbol, "1month", "stock");
-    await request.newStockMacd(symbol, "1month", "stock");
+    // request.stockRSI(symbol, "1month", "stock");
+    // request.StockStoch(symbol, "1month", "stock");
+    // await sleep(1700);
+    // request.StockStochRsi(symbol, "1month", "stock");
+    // await request.newStockMacd(symbol, "1month", "stock");
     x++;
   }
   // for (let x = 0; x <= all_syms.length - 1523; x++) {
@@ -71,16 +71,16 @@ exports.startingPointCryptos = async () => {
     await sleep(1500);
 
     request.stockRSI(symbol, "1week", "crypto");
-    request.StockStoch(symbol, "1week", "crypto");
-    request.StockStochRsi(symbol, "1week", "crypto");
-    request.newStockMacd(symbol, "1week", "crypto");
+    // request.StockStoch(symbol, "1week", "crypto");
+    // request.StockStochRsi(symbol, "1week", "crypto");
+    // request.newStockMacd(symbol, "1week", "crypto");
 
-    await sleep(1500);
+    // await sleep(1500);
 
-    request.stockRSI(symbol, "1month", "crypto");
-    request.StockStoch(symbol, "1month", "crypto");
-    request.StockStochRsi(symbol, "1month", "crypto");
-    request.newStockMacd(symbol, "1month", "crypto");
+    // request.stockRSI(symbol, "1month", "crypto");
+    // request.StockStoch(symbol, "1month", "crypto");
+    // request.StockStochRsi(symbol, "1month", "crypto");
+    // request.newStockMacd(symbol, "1month", "crypto");
   }
   console.log("Done with cryptos");
 };

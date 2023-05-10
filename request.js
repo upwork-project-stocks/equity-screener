@@ -185,28 +185,6 @@ exports.newStockMacd = async (symbol, interval, type) => {
             psig,
             type
           );
-          // DBinteract.macdDBcreate(
-          //   symbol,
-          //   macdData,
-          //   macdSignal,
-          //   date,
-          //   interval,
-          //   pdate,
-          //   pmacd,
-          //   psig,
-          //   type
-          // );
-          // DBinteract.macdDBupdate(
-          //   symbol,
-          //   output[0].macd,
-          //   output[0].macd_signal,
-          //   output[0].datetime,
-          //   interval,
-          //   pdate,
-          //   pmacd,
-          //   psig,
-          //   type
-          // );
         } catch (err) {}
       } else if (interval === "1month") {
         DBinteract.macdSymUpdateMonthly(
