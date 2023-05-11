@@ -9,12 +9,12 @@ sleep = async (time) => {
   return new Promise((resolve) => setTimeout(resolve, time));
 };
 
-exports.startingPointEquities = async() =>{
-  await startingPointEquities()
-  await startingPointCryptos()
-}
+exports.startingPoint = async () => {
+  await startingPointEquities();
+  await startingPointCryptos();
+};
 
-async function startingPointEquities(){
+async function startingPointEquities() {
   //request.allStocks();
   // 5028
 
@@ -63,9 +63,9 @@ async function startingPointEquities(){
   // }
   //console.log("fails", failedSearches.failedList);
   console.log("Out of for loop in equities");
-};
+}
 
-async function startingPointCryptos(){
+async function startingPointCryptos() {
   //request.allCryptos();
   // 3822
   console.log("In Cryptos");
@@ -105,7 +105,7 @@ async function startingPointCryptos(){
   //   // request.newStockMacd(symbol, "1month", "crypto");
   // }
   console.log("Done with cryptos");
-};
+}
 
 exports.failedSearchResults = async () => {
   let failed = await failedCryptoModel.find();
