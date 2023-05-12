@@ -17,7 +17,7 @@ exports.startingPoint = async () => {
 async function startingPointEquities() {
   //request.allStocks();
   // 5028
-
+  console.log("starting equities");
   let all_syms = await Symbols.find();
   let x = 0;
   while (x <= all_syms.length) {
