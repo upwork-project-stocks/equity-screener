@@ -27,7 +27,7 @@ exports.startingPointEquities = async () => {
     await request.stockRSI(symbol, "1week", "stock");
     await request.StockStoch(symbol, "1week", "stock");
     await request.StockStochRsi(symbol, "1week", "stock");
-    // await request.newStockMacd(symbol, "1week", "stock");
+    await request.newStockMacd(symbol, "1week", "stock");
 
     // await sleep(2000);
 
