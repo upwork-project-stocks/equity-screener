@@ -14,7 +14,7 @@ exports.startingPoint = async () => {
   await startingPointCryptos();
 };
 
-async function startingPointEquities() {
+exports.startingPointEquities = async () => {
   //request.allStocks();
   // 5028
   console.log("starting equities");
@@ -22,20 +22,20 @@ async function startingPointEquities() {
   let x = 0;
   while (x <= all_syms.length) {
     let symbol = all_syms[x].symbol;
-    await sleep(1550);
+    await sleep(4000);
 
     await request.stockRSI(symbol, "1week", "stock");
     await request.StockStoch(symbol, "1week", "stock");
     await request.StockStochRsi(symbol, "1week", "stock");
-    await request.newStockMacd(symbol, "1week", "stock");
+    // await request.newStockMacd(symbol, "1week", "stock");
 
-    await sleep(1500);
+    // await sleep(2000);
 
-    request.stockRSI(symbol, "1month", "stock");
-    request.StockStoch(symbol, "1month", "stock");
-    await sleep(1700);
-    request.StockStochRsi(symbol, "1month", "stock");
-    await request.newStockMacd(symbol, "1month", "stock");
+    // request.stockRSI(symbol, "1month", "stock");
+    // request.StockStoch(symbol, "1month", "stock");
+    // await sleep(1700);
+    // request.StockStochRsi(symbol, "1month", "stock");
+    // await request.newStockMacd(symbol, "1month", "stock");
     x++;
   }
   // for (let x = 0; x <= all_syms.length - 1523; x++) {
@@ -63,7 +63,7 @@ async function startingPointEquities() {
   // }
   //console.log("fails", failedSearches.failedList);
   console.log("Out of for loop in equities");
-}
+};
 
 async function startingPointCryptos() {
   //request.allCryptos();
